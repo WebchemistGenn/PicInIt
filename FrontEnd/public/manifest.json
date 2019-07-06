@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pic In It",
+  "name": "사진 속에서 물건을 찾자!",
   "icons": [
     {
       "src": "favicon.ico",
