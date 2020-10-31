@@ -1,17 +1,17 @@
-import * as React from "react";
-import { render, hydrate } from "react-dom";
-import Root from "./Root";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-const rootElement = document.getElementById("root") as HTMLElement;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-const renderApp = () => {
-  if (rootElement.hasChildNodes()) hydrate(<Root />, rootElement);
-  else render(<Root />, rootElement);
-};
-
-renderApp();
-
-if (module.hot) module.hot.accept(["./Root"], () => renderApp());
-
-serviceWorker.register();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
